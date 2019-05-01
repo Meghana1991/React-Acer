@@ -5,8 +5,10 @@
 </div>
 
 <ul>
-  <li *ngFor="let tut of tutorial | async">
+  <li (click)="deleteTutorial(i)" *ngFor="let tut of tutorial | async;  let i = index">
     {{tut.name}}
   </li>
 </ul>
+
+<app-create></app-create>
 <router-outlet></router-outlet>

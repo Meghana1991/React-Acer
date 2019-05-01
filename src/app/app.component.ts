@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { tutorial } from './models/tutorial.model';
+import * as Actions from './actions/tutorial.actions';
 
 interface AppState {
   message: String
 }
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -28,5 +30,10 @@ export class AppComponent {
 
   germanMessage() {
     this.store.dispatch({ type: 'GERMAN' })
+  }
+
+  
+  deleteTutorial(index) {
+    this.store.dispatch(new Actions.RemoveTutorial(index))
   }
 }

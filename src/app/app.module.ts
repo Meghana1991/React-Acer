@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { simpleReducer } from './simple.reducer';
 import { reducer } from './reducers/tutorial.reducer';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
